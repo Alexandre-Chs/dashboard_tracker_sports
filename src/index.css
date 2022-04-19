@@ -1,17 +1,23 @@
-/* RESET CSS */
+/******* RESET CSS *******/
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-/* COLOR */
+/*******--- COLOR ---*******/
 :root {
   --main-bg-color-blue: #97d4e6;
   --main--bg-color-white: #ffffff;
   --main-color-orange: #f8763d;
   --main-color-black: #48484b;
-  --main--bg-color-gray: #F8FAFF;
+  --main--bg-color-gray: #f8faff;
+  --content-color-card: #d9eff5;
+  --content-color-text: #b1b2b4;
+  --content-color-text--dark: #8e8e8f;
+  --content-card-color-orange: #F8763D;
+  --content-card-color-blue: #97D4E6;
+  --content-card-color-yellow: #FFD56A;
 }
 
 body {
@@ -26,18 +32,18 @@ body {
   height: 100vh;
 }
 
-/* CARD DESIGN  */
+/******* CARD DESIGN  *******/
 .main_card_container {
   display: flex;
   align-items: center;
   background-color: var(--main--bg-color-gray);
-  width: 85vw;
+  width: 80vw;
   height: 90vh;
   border-radius: 30px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.075);
 }
 
-/* NavBar */
+/******* NavBar *******/
 .navbar {
   display: flex;
   flex-direction: column;
@@ -90,13 +96,13 @@ body {
   bottom: 10px;
 }
 
-/* CONTENT */
+/******* CONTENT *******/
 
-/* MIDDLE CONTENT */
+/******* MIDDLE CONTENT *******/
 .content_home {
   height: 95%;
-  width: 70%;
-  margin-left: 2rem;
+  width: 60%;
+  margin: 0rem 2rem;
 }
 
 .dashboard {
@@ -109,47 +115,184 @@ body {
 
 .header_dashboard {
   font-weight: 700;
-  margin-bottom: .3rem;
-  font-size: 20px; 
+  margin-bottom: 0.3rem;
+  font-size: 20px;
 }
 
 .home_date {
-  color: #B1B2B4
+  color: var(--content-color-text);
 }
 
-/* SEARCH */
-
+/****** SEARCH ******/
 input {
-  margin-right: 2rem;
-  border: none; 
-  padding-left: 1rem; 
+  border: none;
+  padding-left: 1rem;
 }
 
-input[type=text] {
+input[type="text"] {
   background-image: url(images/search.png);
   background-repeat: no-repeat;
   background-size: 25px 25px;
-  background-position: 150px; 
+  background-position: 150px;
   height: 50px;
   width: 200px;
   border-radius: 15px;
-  outline: none; 
+  outline: none;
 }
 
 input::placeholder {
-  padding-left: 15px; 
+  padding-left: 15px;
 }
 
-input::value {
-  color: red; 
+/****** DESCRIPTION ******/
+.description_home {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  margin-top: 5rem;
+  width: 100%;
+  height: 170px;
+  background-color: var(--content-color-card);
+  border-radius: 20px;
 }
 
+.description_home img {
+  position: absolute;
+  bottom: -16px;
+  right: 25px;
+  width: 218px;
+  height: auto;
+}
+
+.text_description {
+  height: 100%;
+  width: 400px;
+  padding: 2rem;
+}
+
+.text_description p:first-child {
+  margin-bottom: 1rem;
+  font-size: 25px;
+  color: var(--main-color-black);
+}
+
+.text_description p:last-child {
+  font-size: 15px;
+  color: var(--content-color-text--dark);
+  font-weight: 400;
+}
+
+/***** DAILY TASKS *****/
+.dailyTasks_home {
+  margin-top: 2rem;
+  width: 100%;
+  height: 120px;
+}
+
+.dailyTasks_home h3 {
+  margin-bottom: 1rem; 
+  color: var(--main-color-black);
+}
+
+.container_dailytask {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.cardDailyTask {
+  position: relative; 
+  width: 200px;
+  height: 70px;
+  background-color: var(--main--bg-color-white);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.009), 0 3px 6px rgba(0, 0, 0, 0.009);
+  border-radius: 15px;
+}
+
+/* STEPS CARDS */
+.card_steps_dailytask {
+  display: flex; 
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 1rem;
+}
+
+.left_card_steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  width: 30%;
+  height: 80%;
+}
+
+/* CARDS */
+.text-right_card {
+  padding-left: 1.5rem;
+}
+
+.text-right_card p:first-child{
+  font-size: 14px;
+  font-weight: 700; 
+  color: var(--main-color-black)
+}
+
+.text-right_card p:last-child{
+  font-size: 12px;
+  font-weight: 300; 
+  color: var(--content-color-text--dark)
+}
+
+.little_circle1{
+  width: 4px;
+  height: 4px; 
+  border-radius: 50%;
+}
+
+.little_circle2{
+  width: 4px;
+  height: 4px; 
+  border-radius: 50%;
+}
+
+.orange {
+  background-color: var(--content-card-color-orange);
+}
+
+.blue {
+  background-color: var(--content-card-color-blue);
+}
+
+.yellow {
+  background-color: var(--content-card-color-yellow);
+}
+
+.button_setting_card {
+  width: 12px;
+  position: absolute; 
+  top: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: space-between;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
 
 /* RIGHT CONTENT  */
-
 .profileHome {
   background-color: var(--main--bg-color-white);
-  height: 90vh; 
+  height: 90vh;
   width: 20%;
 }
 
+
+/****** CHARTS ******/
+.charts {
+  height: 300px;
+}
+
+.recharts-responsive-container {
+  height: 100%;
+}

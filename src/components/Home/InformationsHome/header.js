@@ -8,11 +8,12 @@ const Header = () => {
         <p className="header_dashboard">Dashboard</p>
         <Date />
       </div>
-        
-         <input type="text" id="search" placeholder="Search here..."></input>
-         
-     
-      
+      <input
+        type="text"
+        autoComplete="off"
+        id="search"
+        placeholder="Search here..."
+      ></input>
     </div>
   );
 };
