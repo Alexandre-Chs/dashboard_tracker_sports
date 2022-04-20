@@ -11,30 +11,38 @@ import {
 
 const ChartsHome = () => {
   const data = [
-    { name: "Mon", uv: 1500 },
-    { name: "Tue", uv: 1200 },
-    { name: "Wed", uv: 800 },
-    { name: "Thu", uv: 1500 },
-    { name: "Fri", uv: 760 },
-    { name: "Sat", uv: 500 },
-    { name: "Sun", uv: 1800 },
+    { name: "Monday", Steps: 1500 },
+    { name: "Tuesday", Steps: 1200 },
+    { name: "Wednesday", Steps: 800 },
+    { name: "Thursday", Steps: 1500 },
+    { name: "Friday", Steps: 760 },
+    { name: "Saturday", Steps: 500 },
+    { name: "Sunday", Steps: 1800 },
   ];
 
   return (
     <div className="charts">
-        <ResponsiveContainer>
-            <LineChart
-        data={data}
-        margin={{ top: 5, right: 20, bottom: 5, left: 0 }}
-      >
-        <Line type="monotone" dataKey="uv" stroke="#8884d8" />
-        <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
-        <XAxis dataKey="name" />
-        <YAxis />
-        <Tooltip />
-      </LineChart>
-        </ResponsiveContainer>
-      
+      <div className="header_charts">
+        <h3>My activity</h3>
+        <div>
+          <select name="selector_tracker" id="select_activity">
+            <option value="steps">Steps</option>
+            <option value="calories">Calories</option>
+            <option value="sleep">Sleep</option>
+          </select>
+        </div>
+      </div>
+      <ResponsiveContainer>
+        <LineChart
+          data={data}
+        >
+          <Line type="monotone" dataKey="Steps" stroke="#52a6c0" />
+          <CartesianGrid stroke="#b1b2b4" strokeDasharray="1 1" />
+          <XAxis dataKey="name" />
+          <YAxis />
+          <Tooltip />
+        </LineChart>
+      </ResponsiveContainer>
     </div>
   );
 };
