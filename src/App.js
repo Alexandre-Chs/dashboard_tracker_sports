@@ -1,12 +1,13 @@
+import React, {Fragment} from "react";
 import "./index.css";
 import Home from "./components/Home/Home";
 
 
 
 function App() {
-  return <div className="App">
+  return <Fragment>
     <Home />
-  </div>;
+  </Fragment>;
 }
 
 export default App;
