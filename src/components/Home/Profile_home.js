@@ -1,5 +1,5 @@
 import React from "react";
-import calendar from "../../../images/calendar.png";
+import calendar from "../../images/calendar.png";
 
 const HomeProfile = () => {
   return (
@@ -41,16 +41,16 @@ const HomeProfile = () => {
           <div className="circle_photo_invitation">
             <div className="circle_photo_second_invitation"></div>
             <div className="right_text_invitation">
-              <p>Jane Cooper</p>
-              <p>Invited you Yoga</p>
+              <p>Jacob Jones</p>
+              <p>Invited you Jogging</p>
             </div>
           </div>
 
           <div className="circle_photo_invitation">
             <div className="circle_photo_third_invitation"></div>
             <div className="right_text_invitation">
-              <p>Jane Cooper</p>
-              <p>Invited you Yoga</p>
+              <p>Jesther Howard</p>
+              <p>Invited you Cycling</p>
             </div>
           </div>
         </div>

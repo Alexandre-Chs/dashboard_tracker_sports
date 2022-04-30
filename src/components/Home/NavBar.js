@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { RiSettings5Fill } from "react-icons/ri";
 import { AiFillHome } from "react-icons/ai";
 import { BsFillFileBarGraphFill } from "react-icons/bs";
@@ -13,22 +14,22 @@ const NavBar = () => {
         <MdSpaceDashboard size={"3.5em"} style={{ color: "#FFFFFF" }} />
       </div>
       <div id="navigation_icon">
-        <div className="icon">
+        <Link className="icon" to="/">
           <AiFillHome size={"1.5em"} style={{ color: "#FFFFFF" }} />
           <p>Home</p>
-        </div>
-        <div className="icon">
+        </Link>
+        <Link className="icon" to="/graph">
           <BsFillFileBarGraphFill size={"1.5em"} style={{ color: "#FFFFFF" }} />
           <p>Graph</p>
-        </div>
-        <div className="icon">
+        </Link>
+        <Link className="icon" to="/timer">
           <IoTimeSharp size={"1.5em"} style={{ color: "#FFFFFF" }} />
           <p>Timer</p>
-        </div>
-        <div className="icon">
+        </Link>
+        <Link className="icon" to="/settings">
           <RiSettings5Fill size={"1.5em"} style={{ color: "#FFFFFF" }} />
           <p>Settings</p>
-        </div>
+        </Link>
       </div>
       <div id="exit_icon">
         <IoExit size={"1.5em"} style={{ color: "#FFFFFF" }} />

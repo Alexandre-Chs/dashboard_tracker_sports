@@ -1,5 +1,5 @@
 import React from "react";
-import imgSport from "../../../images/family_sport.png";
+import imgSport from "../../images/family_sport.png";
 
 const Description = () => {
   return (

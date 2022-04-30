@@ -1,7 +1,8 @@
 import React from "react";
-import NavBar from "./NavBar";
-import HomeInformation from "./InformationsHome/information_home";
-import HomeProfile from "./ProfileHome/Profile_home";
+import "../styles/home.css";
+import NavBar from './Home/NavBar'
+import HomeInformation from './Home/information_home'
+import HomeProfile from './Home/Profile_home'
 
 const Home = () => {
   return (
