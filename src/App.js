@@ -7,6 +7,7 @@ import Settings from "./components/Settings";
 import "./index.css"
 
 function App() {
+
   return (
     <Router>
       <Routes>

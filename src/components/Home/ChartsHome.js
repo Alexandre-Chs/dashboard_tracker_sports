@@ -9,8 +9,11 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
+
+
+
 const ChartsHome = () => {
-  const chartsData = {
+   const chartsData = {
     steps: [
       { name: "Monday", Steps: 1500 },
       { name: "Tuesday", Steps: 1200 },
