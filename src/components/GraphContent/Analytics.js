@@ -1,51 +1,109 @@
 import React, { Fragment } from "react";
 import ChartsHome from "../Home/ChartsHome";
-import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from 'recharts';
+import { GrScorecard } from "react-icons/gr";
+import {
+  Radar,
+  RadarChart,
+  PolarGrid,
+  PolarAngleAxis,
+  PolarRadiusAxis,
+  ResponsiveContainer,
+} from "recharts";
 
 const Analytics = () => {
-  const data01 = [
-    { name: 'Group A', value: 400 },
-    { name: 'Group B', value: 300 },
-    { name: 'Group C', value: 300 },
-    { name: 'Group D', value: 200 },
+  const dataFirstBox = [
+    {
+      subject: "Points",
+      A: 50,
+      B: 110,
+      fullMark: 150,
+    },
+    {
+      subject: "Steps",
+      A: 120,
+      B: 110,
+      fullMark: 150,
+    },
+    {
+      subject: "Calories",
+      A: 98,
+      B: 130,
+      fullMark: 150,
+    },
+    {
+      subject: "Sleep",
+      A: 86,
+      B: 130,
+      fullMark: 150,
+    },
   ];
-  const data02 = [
-    { name: 'A1', value: 100 },
-    { name: 'A2', value: 300 },
-    { name: 'B1', value: 100 },
-    { name: 'B2', value: 80 },
-    { name: 'B3', value: 40 },
-    { name: 'B4', value: 30 },
-    { name: 'B5', value: 50 },
-    { name: 'C1', value: 100 },
-    { name: 'C2', value: 200 },
-    { name: 'D1', value: 150 },
-    { name: 'D2', value: 50 },
-  ];
-
 
   return (
     <Fragment>
       <div className="card_charts">
         <div className="top_content">
           <div className="enhautcharts">
-            <div className="box1"></div>
-            <div className="box2"></div>
+            <div className="box box1">
+              <ResponsiveContainer width="100%" height="100%">
+                <RadarChart
+                  cx="50%"
+                  cy="50%"
+                  outerRadius="80%"
+                  data={dataFirstBox}
+                >
+                  <PolarGrid />
+                  <PolarAngleAxis dataKey="subject" />
+                  <PolarRadiusAxis />
+                  <Radar
+                    name="Mike"
+                    dataKey="A"
+                    stroke="#48484b"
+                    fill="#97d4e6"
+                    fillOpacity={0.3}
+                  />
+                </RadarChart>
+              </ResponsiveContainer>
+            </div>
+            <div className="cardsInformations box2">
+              <div className="inside box">
+                <div className="container_box3">
+                  <div className="iconScore">
+                    <GrScorecard />
+                  </div>
+                  <div className="text_score">
+                    <p>110 pts</p>
+                    <p>Earned this month</p>
+                  </div>
+                  <button className="button_setting_card">
+                    <div className="little_circle1 black"></div>
+                    <div className="little_circle2 black"></div>
+                  </button>
+                </div>
+              </div>
+              <div className="inside box">
+              <div className="container_box3">
+              <div className="iconScore">
+                <GrScorecard />
+              </div>
+              <div className="text_score">
+                <p>10 rewards!</p>
+                <p>10 points left for the next reward</p>
+              </div>
+              <button className="button_setting_card">
+                <div className="little_circle1 black"></div>
+                <div className="little_circle2 black"></div>
+              </button>
+            </div>
+              </div>
+            </div>
           </div>
           <ChartsHome />
         </div>
 
         <div className="bottom_content">
-          <div className="box3">
-          <ResponsiveContainer width="100%" height="100%">
-        <PieChart width={100} height={100}>
-          <Pie data={data01} dataKey="value" cx="50%" cy="50%" outerRadius={60} fill="#8884d8" />
-          <Pie data={data02} dataKey="value" cx="50%" cy="50%" innerRadius={70} outerRadius={90} fill="#82ca9d" label />
-        </PieChart>
-      </ResponsiveContainer>
-          </div>
-          <div className="box4"></div>
-          <div className="box5"></div>
+          <div className="box box3"></div>
+          <div className="box box4"></div>
+          <div className="box box5"></div>
         </div>
       </div>
     </Fragment>
