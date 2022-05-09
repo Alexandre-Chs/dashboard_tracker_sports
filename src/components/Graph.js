@@ -6,8 +6,7 @@ import Analytics from "./GraphContent/Analytics";
 import Header from "./Home/header";
 import "../styles/graph.css";
 
-const Graph = (props) => {
-  console.log(props);
+const Graph = () => {
   return (
     <div className="container">
       <div className="main_card_container">
