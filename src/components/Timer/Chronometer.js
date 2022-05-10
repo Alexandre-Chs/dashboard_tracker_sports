@@ -7,8 +7,6 @@ const Chronometer = () => {
   const [length, setLength] = useState(null);
   const countRef = useRef(null);
 
-  const circle = document.getElementById("circle2");
-
   const formatTime = () => {
     const getSeconds = `0${timer % 60}`.slice(-2);
     const minutes = `${Math.floor(timer / 60)}`;

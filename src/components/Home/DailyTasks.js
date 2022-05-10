@@ -2,9 +2,15 @@ import React from "react";
 import { GiFootprint } from "react-icons/gi";
 import { AiFillFire } from "react-icons/ai";
 import { RiMoonFill } from "react-icons/ri";
-
+import Modal from "./Modal";
 
 const DailyTasks = () => {
+
+  const handleModal = () => {
+    alert('ok');
+    <Modal/>
+  }
+
   return (
     <div className="dailyTasks_home">
       <h3>Daily Tasks</h3>
@@ -18,7 +24,7 @@ const DailyTasks = () => {
             <p>Step</p>
           </div>
 
-          <button className="button_setting_card">
+          <button onClick={handleModal} className="button_setting_card">
             <div className="little_circle1 orange"></div>
             <div className="little_circle2 orange"></div>
           </button>

@@ -1,7 +1,6 @@
 import React from "react";
 import NavBar from "./Home/NavBar";
 import HomeProfile from "./Home/Profile_home";
-import ChartsHome from "./Home/ChartsHome";
 import Analytics from "./GraphContent/Analytics";
 import Header from "./Home/header";
 import "../styles/graph.css";

@@ -120,12 +120,12 @@
 }
 
 /****** SEARCH ******/
-input {
+.dashboard input {
   border: none;
   padding-left: 1rem;
 }
 
-input[type="text"] {
+.dashboard input[type="text"] {
   padding: 15px 10px 15px 20px;
   background-image: url(../images/search.png);
   background-repeat: no-repeat;
@@ -142,7 +142,7 @@ input[type="text"] {
   box-sizing: border-box;
 }
 
-input:focus {
+.dashboard input:focus {
   width: 200px;
 }
 
