@@ -1,15 +1,22 @@
-import React from "react";
+import React, {useState} from "react";
 import { GiFootprint } from "react-icons/gi";
 import { AiFillFire } from "react-icons/ai";
 import { RiMoonFill } from "react-icons/ri";
 import Modal from "./Modal";
 
+
 const DailyTasks = () => {
 
-  const handleModal = () => {
-    alert('ok');
-    <Modal/>
+  const [visible, setVisible] = useState(false)
+
+  const showModal = () => {
+    setVisible(true);
   }
+
+  const disableModal = () => {
+    setVisible(false);
+  }
+
 
   return (
     <div className="dailyTasks_home">
@@ -24,7 +31,7 @@ const DailyTasks = () => {
             <p>Step</p>
           </div>
 
-          <button onClick={handleModal} className="button_setting_card">
+          <button onClick={showModal} className="button_setting_card">
             <div className="little_circle1 orange"></div>
             <div className="little_circle2 orange"></div>
           </button>
@@ -59,6 +66,7 @@ const DailyTasks = () => {
           </button>
         </div>
       </div>
+      <Modal visible={visible} notShow={disableModal}/>
     </div>
   );
 };
