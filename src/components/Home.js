@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useContext} from "react";
 import "../styles/home.css";
 import NavBar from './Home/NavBar'
 import HomeInformation from './Home/information_home'

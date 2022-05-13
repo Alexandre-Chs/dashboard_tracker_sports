@@ -1,22 +1,37 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { GiFootprint } from "react-icons/gi";
 import { AiFillFire } from "react-icons/ai";
 import { RiMoonFill } from "react-icons/ri";
 import Modal from "./Modal";
 
-
 const DailyTasks = () => {
-
-  const [visible, setVisible] = useState(false)
+  const [visible, setVisible] = useState(false);
+  const [steps, setSteps] = useState(false);
+  const [calories, setCalories] = useState(false);
+  const [sleep, setSleep] = useState(false);
 
   const showModal = () => {
     setVisible(true);
-  }
+  };
+
+  const showCalories = () => {
+    setCalories(true);
+  };
+
+  const showSteps = () => {
+    setSteps(true);
+  };
+
+  const showSleep = () => {
+    setSleep(true);
+  };
 
   const disableModal = () => {
     setVisible(false);
-  }
-
+    setCalories(false);
+    setSteps(false);
+    setSleep(false);
+  };
 
   return (
     <div className="dailyTasks_home">
@@ -31,7 +46,13 @@ const DailyTasks = () => {
             <p>Step</p>
           </div>
 
-          <button onClick={showModal} className="button_setting_card">
+          <button
+            onClick={() => {
+              showModal();
+              showSteps();
+            }}
+            className="button_setting_card"
+          >
             <div className="little_circle1 orange"></div>
             <div className="little_circle2 orange"></div>
           </button>
@@ -46,7 +67,13 @@ const DailyTasks = () => {
             <p>Calories</p>
           </div>
 
-          <button className="button_setting_card">
+          <button
+            onClick={() => {
+              showModal();
+              showCalories();
+            }}
+            className="button_setting_card"
+          >
             <div className="little_circle1 blue"></div>
             <div className="little_circle2 blue"></div>
           </button>
@@ -60,13 +87,25 @@ const DailyTasks = () => {
             <p>100 Score</p>
             <p>Sleep</p>
           </div>
-          <button className="button_setting_card">
+          <button
+            onClick={() => {
+              showModal();
+              showSleep();
+            }}
+            className="button_setting_card"
+          >
             <div className="little_circle1 yellow"></div>
             <div className="little_circle2 yellow"></div>
           </button>
         </div>
       </div>
-      <Modal visible={visible} notShow={disableModal}/>
+      <Modal
+        calories={calories}
+        steps={steps}
+        sleep={sleep}
+        visible={visible}
+        notShow={disableModal}
+      />
     </div>
   );
 };

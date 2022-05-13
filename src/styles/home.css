@@ -515,9 +515,60 @@ select {
   top: 0;
   right: 0;
   bottom: 0;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.219);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 3000;
+}
+
+.container_modal {
+  position: relative;
+  background-color: var(--main--bg-color-white);
+  width: 400px;
+  height: 250px;
+  border-radius: 5px;
+}
+
+.close_modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+  font-weight: 700;
+}
+
+.enter_steps_count {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.enter_steps_count label {
+  margin-bottom: 2rem;
+}
+
+.enter_steps_count input {
+  border: none; 
+}
+
+
+.enter_steps_count input[type="number"] {
+  padding: .2rem;
+  width: 150px;
+  border: 1px solid black;
+}
+
+.enter_steps_count input[type="submit"] {
+  margin-top: 1rem;
+  padding: .2rem;
+  width: 150px;
+  background-color: #f8763d;
+  border-radius: 5px;
 }
