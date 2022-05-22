@@ -14,8 +14,6 @@
 
 .users_settings {
     width: 100%;
-    background-color: var(--main--bg-color-white);
-    padding: 2rem; 
 }
 
 .users_settings h4 {
@@ -76,3 +74,10 @@
     width: 150px;
     margin-right: 1rem;
 }
+
+@media screen and (max-width: 1000px) {
+    .container_settings {
+        flex: 1;
+    }
+
+ }

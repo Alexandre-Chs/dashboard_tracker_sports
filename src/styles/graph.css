@@ -131,3 +131,9 @@
     flex-direction: column;
 }
 
+
+@media screen and (max-width: 1000px) {  
+    .container_graph {
+        flex: 1; 
+    }
+}

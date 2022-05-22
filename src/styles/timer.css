@@ -93,3 +93,10 @@
     stroke:#f8763d;
     transition: 1s linear;
   }
+
+  @media screen and (max-width: 1000px) {
+
+    .container_timer {
+      flex: 1;
+    }
+  }
