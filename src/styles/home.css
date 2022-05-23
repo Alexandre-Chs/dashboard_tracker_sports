@@ -584,34 +584,41 @@ select {
 
 /****** MOBILE DESIGN  ******/
 @media screen and (max-width: 1000px) {
+  /* RESET HEIGHT CARD */
+  .main_card_container {
+    height: auto;
+  }
   /* HAMBURGER ICON SETTINGS */
   .hamburger {
     display: flex;
     align-items: flex-start;
     position: relative;
     z-index: 10000;
+    position: absolute;
+    left: 0;
+    top: 0;
   }
 
   .width_navBar {
     position: absolute;
-    left: 0; 
+    left: 0;
     top: 0;
     bottom: 0;
     transition: background-color 1s;
     width: 100px;
     background-color: var(--content-color-card);
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   }
   .hamburger_icon {
-    margin-left: .5rem;
-    position: fixed;
-    padding-top: 3rem;
+    height: 30px; /* the height is there only to be able to click the whole button */
+    margin-left: 0.5rem;
+    position: absolute;
+    top: 39px;
+    left: 10px;
     display: flex;
     align-items: center;
-    height: 60px;
     width: 30px;
-    background-color: transparent;
-    cursor: pointer; 
+    cursor: pointer;
   }
   .hamburger_icon .bar {
     display: block;
@@ -624,7 +631,7 @@ select {
 
   .hamburger_icon .bar::before,
   .hamburger_icon .bar::after {
-    cursor: pointer; 
+    cursor: pointer;
     content: "";
     left: 0;
     position: absolute;
@@ -661,14 +668,14 @@ select {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    transition: transform .5s ease;
+    transition: transform 0.5s ease;
     text-decoration: none;
   }
 
-  .icon_mobile p{
+  .icon_mobile p {
     font-weight: 700;
     padding-top: 8px;
-    color: var(--main-color-black)
+    color: var(--main-color-black);
   }
 
   .home {
@@ -701,10 +708,12 @@ select {
     transform: translateX(-1300px);
   }
 
+  /* INITIAL VALUE NAVBAR */
   .open_navBar {
     transform: translateX(0);
   }
-  
+
+  /* DISPLAY NONE */
   .navbar {
     display: none;
   }
@@ -713,11 +722,39 @@ select {
     display: none;
   }
 
+  /* TAKE ALL PLACEMENT */
   .content_home {
     flex: 1;
   }
-
+  /* MOVE HEADER */
   .dashboard {
     margin-left: 2rem;
+  }
+}
+
+/****** MEDIA FOR MOBILE ******/
+@media screen and (max-width: 650px) {
+  /* CHANGE SIZE IMG */
+  .description_home img {
+    bottom: 11px;
+    right: 7px;
+    width: 146px;
+  }
+}
+
+/****** MEDIA FOR LITTLE MOBILE ******/
+@media screen and (max-width: 565px) {
+  /* DISPLAY NONE IMG */
+  .description_home img {
+    display: none;
+  }
+
+  .container_dailytask {
+    flex-direction: column;
+  }
+
+  .dailyTasks_home {
+    height: auto;
+    width: 90%;
   }
 }
