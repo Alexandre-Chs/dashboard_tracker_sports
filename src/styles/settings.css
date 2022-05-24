@@ -1,83 +1,122 @@
 /****** CONTAINER ******/
 
 .container_settings {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 69%;
-    padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 69%;
+  padding: 0 2rem;
 }
 
 .container_settings_content {
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
 
 .users_settings {
-    width: 100%;
+  width: 100%;
 }
 
 .users_settings h4 {
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--main-color-black);
-    letter-spacing: 3px;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--main-color-black);
+  letter-spacing: 3px;
 }
 
-.users_settings #paragraph_settings{
-    font-size: 16px;
-    color: var(--content-color-text--dark);
-    padding-top: .5rem;
+.users_settings #paragraph_settings {
+  font-size: 16px;
+  color: var(--content-color-text--dark);
+  padding-top: 0.5rem;
 }
 
 /****** INPUT ******/
 
 .input_settings {
-    display: flex;
-    margin-top: 15px;
+  display: flex;
+  margin-top: 15px;
 }
 .label_settings {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 .input_settings button {
-    width: 150px;
-    height: 30px;
-    margin-left: 1rem; 
-    outline: none;
-    background-color: var(--main-bg-color-blue);
-    border: 1px solid var(--main-bg-color-blue);
-    padding: 5px 10px;
-    border-radius: 7px;
-    color: #FFFFFF;
-    cursor: pointer;
-    margin: 0 1rem;
+  width: 150px;
+  height: 30px;
+  margin-left: 1rem;
+  outline: none;
+  background-color: var(--main-bg-color-blue);
+  border: 1px solid var(--main-bg-color-blue);
+  padding: 5px 10px;
+  border-radius: 7px;
+  color: #ffffff;
+  cursor: pointer;
+  margin: 0 1rem;
 }
 .input_block_settings {
-    margin-top: 3rem;
+  margin-top: 3rem;
 }
 
 .input_block_settings label {
-    color: var(--content-color-text--dark);
-    font-size: 16px;
+  color: var(--content-color-text--dark);
+  font-size: 16px;
 }
 .input_settings input {
-    width: 250px;
-    height: 30px;
-    padding: 0.5rem;
+  width: 250px;
+  height: 30px;
+  padding: 0.5rem;
 }
 
 .label_settings_password {
-    display: flex;
+  display: flex;
 }
 
 .label_settings_password input {
-    width: 150px;
-    margin-right: 1rem;
+  width: 150px;
+  margin-right: 1rem;
 }
 
 @media screen and (max-width: 1000px) {
-    .container_settings {
-        flex: 1;
-    }
+  .input_settings {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
- }
+  .container_settings {
+    flex: 1;
+    overflow: hidden;
+    height: 650px;
+  }
+
+  .input_settings input {
+    width: 400px;
+  }
+
+  .input_settings button {
+    width: 400px;
+    margin: 0;
+    margin-top: 10px;
+  }
+
+  .label_settings_password {
+    flex-direction: column;
+  }
+
+  .label_settings_password input {
+      margin: 0;
+    margin-top: 10px;
+  }
+}
+
+/* LITTLE MOBILE */
+@media screen and (max-width: 706px) {
+  .input_settings input {
+    width: 250px;
+  }
+
+  .input_settings button {
+    width: 250px;
+    margin: 0;
+    margin-top: 10px;
+  }
+}

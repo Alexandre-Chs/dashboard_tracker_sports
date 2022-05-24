@@ -1,7 +1,5 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext} from "react";
 import { MyContext } from "../../App";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 // IMPORT FROM DAILYTASK
 const Modal = ({ calories, steps, sleep, visible, notShow }) => {
@@ -9,9 +7,6 @@ const Modal = ({ calories, steps, sleep, visible, notShow }) => {
   const newDataSteps = [...context.steps];
   const newDataCalories = [...context.calories];
   const newDataSleep = [...context.sleep];
-
-  const notify = () => toast("Wow so easy!");
-
 
   const handleInputSteps = (e) => {
     const numberSteps = Number(e.target.value);
@@ -28,7 +23,7 @@ const Modal = ({ calories, steps, sleep, visible, notShow }) => {
   };
   
   return visible && steps ? (
-    <div className="modal">
+    <div className="modal" >
       <div className="container_modal">
         <div className="enter_steps_count">
           <label>Enter how many steps you have walked today</label>
@@ -48,7 +43,6 @@ const Modal = ({ calories, steps, sleep, visible, notShow }) => {
           </p>
         </div>
       </div>
-      <ToastContainer />
     </div>
   ) : visible && calories ? (
     <div className="modal">

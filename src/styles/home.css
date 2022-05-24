@@ -755,6 +755,28 @@ select {
 
   .dailyTasks_home {
     height: auto;
-    width: 90%;
+  }
+
+  .description_home {
+    margin-top: 2rem;
+  }
+  /* CHANGE WIDTH DAILY TASKS */
+  .card_steps_dailytask {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+
+  /* CHARTS */
+  .charts {
+    margin-top: 1rem;
+    padding: 10px;
+    margin-bottom: 2rem;
+  }
+
+  /* MODAL */
+  .container_modal {
+    width: 350px;
+    height: 200px;
   }
 }
