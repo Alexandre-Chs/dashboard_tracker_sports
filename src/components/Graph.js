@@ -2,7 +2,7 @@ import React from "react";
 import NavBar from "./Home/NavBar";
 import HomeProfile from "./Home/Profile_home";
 import Analytics from "./GraphContent/Analytics";
-import Header from "./Home/header";
+import Header from "./Home/Header";
 import "../styles/graph.css";
 import BurgerAndMenu from "./Home/Burger";
 
